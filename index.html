@@ -8,28 +8,30 @@
   <style>
     body {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      line-height: 1.08;
-      color: black;
-      background: white;
+      color: #000;
+      background: #fff;
       margin: 0;
-      padding: 20px 60px;
+      padding: 22px 70px;
+      font-size: 24px;
+      line-height: 1.05;
     }
 
     h1 {
-      font-size: 38px;
-      margin: 0 0 40px 0;
+      font-size: 40px;
+      line-height: 1;
+      margin: 0 0 45px 0;
       font-weight: bold;
     }
 
     h2 {
       font-size: 28px;
-      margin: 0 0 28px 0;
+      line-height: 1;
+      margin: 0 0 30px 0;
       font-weight: bold;
     }
 
     a {
-      color: blue;
+      color: #0000ee;
       text-decoration: none;
     }
 
@@ -37,56 +39,79 @@
       text-decoration: underline;
     }
 
-    .container {
+    .page {
+      width: 100%;
+    }
+
+    .columns {
       display: grid;
-      grid-template-columns: 330px 1fr 330px;
-      column-gap: 70px;
+      grid-template-columns: 310px 760px 320px;
+      column-gap: 80px;
       align-items: start;
     }
 
-    .left p,
-    .middle p,
-    .right p {
+    .left,
+    .middle,
+    .right {
+      min-width: 0;
+    }
+
+    p {
       margin-top: 0;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
-    .profile-photo {
-      width: 230px;
-      margin-bottom: 28px;
+    .photo {
+      width: 220px;
+      margin: 0 0 28px 0;
     }
 
-    .profile-photo img {
+    .photo img {
       width: 100%;
       height: auto;
       display: block;
     }
 
     .article {
-      margin-bottom: 24px;
+      margin-bottom: 25px;
     }
 
     .section {
-      margin-bottom: 48px;
+      margin-bottom: 58px;
     }
 
     em {
       font-style: italic;
     }
 
-    @media (max-width: 1000px) {
+    @media screen and (max-width: 1250px) {
       body {
-        padding: 20px;
-        font-size: 20px;
+        padding: 20px 35px;
+        font-size: 21px;
       }
 
-      .container {
+      .columns {
+        grid-template-columns: 260px 1fr 260px;
+        column-gap: 45px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      .columns {
         display: block;
       }
 
       .middle,
       .right {
-        margin-top: 40px;
+        margin-top: 45px;
       }
     }
   </style>
@@ -94,99 +119,103 @@
 
 <body>
 
-  <h1>Ali Rezaei</h1>
+  <div class="page">
 
-  <div class="container">
+    <h1>Ali Rezaei</h1>
 
-    <div class="left">
-      <h2>about</h2>
+    <div class="columns">
 
-      <div class="profile-photo">
-        <img src="photo.jpg" alt="Ali Rezaei">
-      </div>
+      <div class="left">
+        <h2>about</h2>
 
-      <p>
-        I am a philosopher interested in philosophy of language,
-        philosophical logic, metaphysics, epistemology, and neighboring fields.
-      </p>
-
-      <p>
-        You can reach me at ali.rezaei7978-at-gmail.com.
-      </p>
-
-      <p>
-        My CV is available <a href="cv.pdf">here</a>.
-      </p>
-    </div>
-
-    <div class="middle">
-      <h2>articles</h2>
-
-      <div class="article">
-        <a href="#">Title of paper one</a>. Manuscript.
-      </div>
-
-      <div class="article">
-        <a href="#">Title of paper two</a>. 2025. <em>Journal Name</em>.
-      </div>
-
-      <div class="article">
-        <a href="#">Title of paper three</a>, with Coauthor Name. 2024.
-        <em>Conference or Journal Name</em>.
-      </div>
-
-      <div class="article">
-        <a href="#">Title of paper four</a>. 2024. <em>Journal Name</em>.
-      </div>
-
-      <div class="article">
-        <a href="#">Title of paper five</a>, with Coauthor Name. 2023.
-        <em>Journal Name</em>.
-      </div>
-
-      <div class="article">
-        <a href="#">Title of paper six</a>. 2023. <em>Journal Name</em>.
-      </div>
-
-      <div class="article">
-        <a href="#">Title of paper seven</a>. 2022. <em>Journal Name</em>.
-      </div>
-    </div>
-
-    <div class="right">
-
-      <div class="section">
-        <h2>book</h2>
+        <div class="photo">
+          <img src="photo.jpg" alt="Ali Rezaei">
+        </div>
 
         <p>
-          <a href="#">Title of book or project</a>, Publisher, year.
-          <a href="#">Preface</a>
-        </p>
-      </div>
-
-      <div class="section">
-        <h2>some course pages</h2>
-
-        <p>
-          <a href="#">2026 course</a> on topic one
+          I am a philosopher interested in philosophy of language,
+          philosophical logic, metaphysics, epistemology, and neighboring fields.
         </p>
 
         <p>
-          <a href="#">2025 course</a> on topic two
+          You can reach me at ali.rezaei7978-at-gmail.com.
         </p>
 
         <p>
-          <a href="#">2024 course</a> on topic three
+          My CV is available <a href="cv.pdf">here</a>.
         </p>
       </div>
 
-      <div class="section">
-        <h2>handbook chapters</h2>
+      <div class="middle">
+        <h2>articles</h2>
 
-        <p>
-          <a href="#">Title of handbook chapter</a>.
-          Handbook name, Publisher.
-        </p>
+        <div class="article">
+          <a href="#">Title of paper one</a>. Manuscript.
+        </div>
+
+        <div class="article">
+          <a href="#">Title of paper two</a>. 2025. <em>Journal Name</em>.
+        </div>
+
+        <div class="article">
+          <a href="#">Title of paper three</a>, with Coauthor Name. 2024.
+          <em>Conference or Journal Name</em>.
+        </div>
+
+        <div class="article">
+          <a href="#">Title of paper four</a>. 2024. <em>Journal Name</em>.
+        </div>
+
+        <div class="article">
+          <a href="#">Title of paper five</a>, with Coauthor Name. 2023.
+          <em>Journal Name</em>.
+        </div>
+
+        <div class="article">
+          <a href="#">Title of paper six</a>. 2023. <em>Journal Name</em>.
+        </div>
+
+        <div class="article">
+          <a href="#">Title of paper seven</a>. 2022. <em>Journal Name</em>.
+        </div>
+      </div>
+
+      <div class="right">
+
+        <div class="section">
+          <h2>book</h2>
+
+          <p>
+            <a href="#">Title of book or project</a>, Publisher, year.
+            <a href="#">Preface</a>
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>some course pages</h2>
+
+          <p>
+            <a href="#">2026 course</a> on topic one
+          </p>
+
+          <p>
+            <a href="#">2025 course</a> on topic two
+          </p>
+
+          <p>
+            <a href="#">2024 course</a> on topic three
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>handbook chapters</h2>
+
+          <p>
+            <a href="#">Title of handbook chapter</a>.
+            Handbook name, Publisher.
+          </p>
+        </div>
+
       </div>
 
     </div>
