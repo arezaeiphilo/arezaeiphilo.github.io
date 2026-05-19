@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Ali Rezaei</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     body {
       font-family: Georgia, "Times New Roman", serif;
-      color: #000;
-      background: #fff;
-      margin: 0;
-      padding: 22px 70px;
       font-size: 24px;
       line-height: 1.05;
+      margin: 24px 120px;
+      color: black;
+      background: white;
     }
 
     h1 {
-      font-size: 40px;
-      line-height: 1;
+      font-size: 42px;
       margin: 0 0 45px 0;
-      font-weight: bold;
     }
 
     h2 {
-      font-size: 28px;
-      line-height: 1;
-      margin: 0 0 30px 0;
-      font-weight: bold;
+      font-size: 29px;
+      margin: 0 0 28px 0;
     }
 
     a {
-      color: #0000ee;
+      color: blue;
       text-decoration: none;
     }
 
@@ -39,98 +31,60 @@
       text-decoration: underline;
     }
 
-    .page {
+    table {
       width: 100%;
+      border-collapse: collapse;
     }
 
-    .columns {
-      display: grid;
-      grid-template-columns: 310px 760px 320px;
-      column-gap: 80px;
-      align-items: start;
+    td {
+      vertical-align: top;
     }
 
-    .left,
-    .middle,
+    .left {
+      width: 25%;
+      padding-right: 70px;
+    }
+
+    .middle {
+      width: 55%;
+      padding-right: 70px;
+    }
+
     .right {
-      min-width: 0;
+      width: 20%;
     }
 
     p {
       margin-top: 0;
-      margin-bottom: 30px;
-    }
-
-    .photo {
-      width: 220px;
-      margin: 0 0 28px 0;
-    }
-
-    .photo img {
-      width: 100%;
-      height: auto;
-      display: block;
+      margin-bottom: 32px;
     }
 
     .article {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .section {
-      margin-bottom: 58px;
+      margin-bottom: 56px;
     }
 
-    em {
-      font-style: italic;
-    }
-
-    @media screen and (max-width: 1250px) {
-      body {
-        padding: 20px 35px;
-        font-size: 21px;
-      }
-
-      .columns {
-        grid-template-columns: 260px 1fr 260px;
-        column-gap: 45px;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-
-      h2 {
-        font-size: 25px;
-      }
-    }
-
-    @media screen and (max-width: 850px) {
-      .columns {
-        display: block;
-      }
-
-      .middle,
-      .right {
-        margin-top: 45px;
-      }
+    img {
+      width: 230px;
+      margin-bottom: 28px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="page">
+  <h1>Ali Rezaei</h1>
 
-    <h1>Ali Rezaei</h1>
+  <table>
+    <tr>
 
-    <div class="columns">
-
-      <div class="left">
+      <td class="left">
         <h2>about</h2>
 
-        <div class="photo">
-          <img src="photo.jpg" alt="Ali Rezaei">
-        </div>
+        <img src="photo.jpg" alt="Ali Rezaei">
 
         <p>
           I am a philosopher interested in philosophy of language,
@@ -139,14 +93,11 @@
 
         <p>
           You can reach me at ali.rezaei7978-at-gmail.com.
+          My CV is <a href="cv.pdf">here</a>.
         </p>
+      </td>
 
-        <p>
-          My CV is available <a href="cv.pdf">here</a>.
-        </p>
-      </div>
-
-      <div class="middle">
+      <td class="middle">
         <h2>articles</h2>
 
         <div class="article">
@@ -154,40 +105,39 @@
         </div>
 
         <div class="article">
-          <a href="#">Title of paper two</a>. 2025. <em>Journal Name</em>.
+          <a href="#">Title of paper two</a>. 2025. <i>Journal Name</i>.
         </div>
 
         <div class="article">
           <a href="#">Title of paper three</a>, with Coauthor Name. 2024.
-          <em>Conference or Journal Name</em>.
+          <i>Journal Name</i>.
         </div>
 
         <div class="article">
-          <a href="#">Title of paper four</a>. 2024. <em>Journal Name</em>.
+          <a href="#">Title of paper four</a>. 2024. <i>Journal Name</i>.
         </div>
 
         <div class="article">
           <a href="#">Title of paper five</a>, with Coauthor Name. 2023.
-          <em>Journal Name</em>.
+          <i>Journal Name</i>.
         </div>
 
         <div class="article">
-          <a href="#">Title of paper six</a>. 2023. <em>Journal Name</em>.
+          <a href="#">Title of paper six</a>. 2023. <i>Journal Name</i>.
         </div>
 
         <div class="article">
-          <a href="#">Title of paper seven</a>. 2022. <em>Journal Name</em>.
+          <a href="#">Title of paper seven</a>. 2022. <i>Journal Name</i>.
         </div>
-      </div>
+      </td>
 
-      <div class="right">
-
+      <td class="right">
         <div class="section">
           <h2>book</h2>
 
           <p>
-            <a href="#">Title of book or project</a>, Publisher, year.
-            <a href="#">Preface</a>
+            <a href="#">Title of book or project</a>,
+            Publisher. 2025.
           </p>
         </div>
 
@@ -215,12 +165,10 @@
             Handbook name, Publisher.
           </p>
         </div>
+      </td>
 
-      </div>
-
-    </div>
-
-  </div>
+    </tr>
+  </table>
 
 </body>
 </html>
